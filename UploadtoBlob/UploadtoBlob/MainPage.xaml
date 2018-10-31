@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UploadtoBlob"
+             x:Class="UploadtoBlob.MainPage">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Select a picture"
+                Clicked="Button_Clicked" TextColor="Blue" />
+            <Button Text="Take a picture"
+                Clicked="Button_Clicked_2" TextColor="Red" />
+        </StackLayout>
+        <Image x:Name="imageView"
+              WidthRequest="400"
+               HeightRequest="220"
+               />
+        <Button Text="Upload to Blob"
+                Clicked="Button_Clicked_1"/>
+        <Entry x:Name="UploadedUrl" TextColor="Chocolate" Text="Url:"/>
+    </StackLayout>
+
+</ContentPage>
