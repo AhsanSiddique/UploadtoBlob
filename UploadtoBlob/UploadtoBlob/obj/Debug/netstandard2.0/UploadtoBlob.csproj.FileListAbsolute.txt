@@ -1,0 +1,11 @@
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\bin\Debug\netstandard2.0\UploadtoBlob.deps.json
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\bin\Debug\netstandard2.0\UploadtoBlob.dll
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\bin\Debug\netstandard2.0\UploadtoBlob.pdb
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\UploadtoBlob.csproj.CoreCompileInputs.cache
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\UploadtoBlob.AssemblyInfoInputs.cache
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\UploadtoBlob.AssemblyInfo.cs
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\UploadtoBlob.dll
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\UploadtoBlob.pdb
