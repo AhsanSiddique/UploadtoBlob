@@ -9,3 +9,4 @@ C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\D
 C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\UploadtoBlob.dll
 C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\UploadtoBlob.pdb
+C:\Users\asiddique\Documents\GitHub\UploadtoBlob\UploadtoBlob\UploadtoBlob\obj\Debug\netstandard2.0\UploadtoBlob.csprojAssemblyReference.cache

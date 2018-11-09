@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:UploadtoBlob"
              x:Class="UploadtoBlob.MainPage">
 
-    <StackLayout Padding="15">
+    <StackLayout Padding="5,10,5,0">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -17,10 +17,12 @@
             <Button Grid.Row="0" Grid.Column="1" Text="Take picture"
                 Clicked="Button_Clicked_2"/>
         </Grid>
-        <Image x:Name="imageView" HeightRequest="400" WidthRequest="400"/>
-        <Button Text="Upload to Blob" Clicked="Button_Clicked_1" Image="upload"/>
-        <Editor x:Name="UploadedUrl" TextColor="Chocolate" HeightRequest="30"/>
-        <ActivityIndicator x:Name="uploadIndicator"/>
+        
+        <Image x:Name="imageView" HeightRequest="300" WidthRequest="400"/>
+        <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False"/>
+        <Button Text="Upload to Blob" Clicked="Button_Clicked_1"/>
+        <Editor x:Name="UploadedUrl" TextColor="Chocolate" HeightRequest="85" Text="Image URL:"/>
+        
     </StackLayout>
 
 </ContentPage>
