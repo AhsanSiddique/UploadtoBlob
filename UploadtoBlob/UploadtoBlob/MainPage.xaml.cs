@@ -24,6 +24,7 @@ namespace UploadtoBlob
         //Picture choose from device
         private async void Button_Clicked(object sender, EventArgs e)
         {
+            
             await CrossMedia.Current.Initialize();
             if (!CrossMedia.Current.IsPickPhotoSupported)
             {
@@ -38,6 +39,7 @@ namespace UploadtoBlob
                 };
                 _mediaFile = await CrossMedia.Current.PickPhotoAsync();
                 imageView.Source = ImageSource.FromStream(() => _mediaFile.GetStream());
+                UploadedUrl.Text = "Image URL:";
             }
         }
         
@@ -59,6 +61,7 @@ namespace UploadtoBlob
         //Take picture from camera
         private async void Button_Clicked_2(object sender, EventArgs e)
         {
+            
             await CrossMedia.Current.Initialize();
             if(!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
@@ -79,15 +82,14 @@ namespace UploadtoBlob
                 {
                     PhotoSize = PhotoSize.Medium
                 };
+                UploadedUrl.Text = "Image URL:";
             }            
         }
 
         //Upload to blob function
         private async void UploadImage(Stream stream)
         {
-            uploadIndicator.IsVisible = true;
-            uploadIndicator.IsRunning = true;
-
+            Busy();
             var account = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=blobacount;AccountKey=hMZuDKfdz1iGPVsV+W9V52YnsjD6F1tjdH89XIw0QM3J6FB+tdJ9IgQI+OAWHgCRKSYMK0EwGcpB0qCJI8kY+w==;EndpointSuffix=core.windows.net");
             var client = account.CreateCloudBlobClient();
             var container = client.GetContainerReference("images");
@@ -96,11 +98,27 @@ namespace UploadtoBlob
             var blockBlob = container.GetBlockBlobReference($"{name}.png");
             await blockBlob.UploadFromStreamAsync(stream);
             URL = blockBlob.Uri.OriginalString;
-            
             UploadedUrl.Text = URL;
+            NotBusy();
+            await DisplayAlert("Uploaded", "Image uploaded to Blob Storage Successfully!", "OK");
+        }
+
+        public void Busy()
+        {
+            uploadIndicator.IsVisible = true;
+            uploadIndicator.IsRunning = true;
+            btnSelectPic.IsEnabled = false;
+            btnTakePic.IsEnabled = false;
+            btnUpload.IsEnabled = false;
+        }
+
+        public void NotBusy()
+        {
             uploadIndicator.IsVisible = false;
             uploadIndicator.IsRunning = false;
-            await DisplayAlert("Success", "Image uploaded to Blob Successfully!.", "OK");
+            btnSelectPic.IsEnabled = true;
+            btnTakePic.IsEnabled = true;
+            btnUpload.IsEnabled = true;
         }
 
     }

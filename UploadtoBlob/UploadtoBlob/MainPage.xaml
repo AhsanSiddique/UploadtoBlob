@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:UploadtoBlob"
              x:Class="UploadtoBlob.MainPage">
 
-    <StackLayout Padding="5,10,5,0">
+    <StackLayout Padding="10,10,10,0">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -12,16 +12,16 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" Text="Select picture"
-                Clicked="Button_Clicked"/>
-            <Button Grid.Row="0" Grid.Column="1" Text="Take picture"
-                Clicked="Button_Clicked_2"/>
+            <Button x:Name="btnSelectPic" Grid.Row="0" Grid.Column="0" Text="Select picture"
+                Clicked="Button_Clicked" BackgroundColor="DodgerBlue" TextColor="White"/>
+            <Button x:Name="btnTakePic" Grid.Row="0" Grid.Column="1" Text="Take picture"
+                Clicked="Button_Clicked_2" BackgroundColor="DodgerBlue" TextColor="White"/>
         </Grid>
         
         <Image x:Name="imageView" HeightRequest="300" WidthRequest="400"/>
-        <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False"/>
-        <Button Text="Upload to Blob" Clicked="Button_Clicked_1"/>
-        <Editor x:Name="UploadedUrl" TextColor="Chocolate" HeightRequest="85" Text="Image URL:"/>
+        <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="DodgerBlue"/>
+        <Button Text="Upload to Blob" Clicked="Button_Clicked_1" x:Name="btnUpload" BackgroundColor="Green" TextColor="White"/>
+        <Editor x:Name="UploadedUrl" TextColor="Black" HeightRequest="85" Text="Image URL:"/>
         
     </StackLayout>
 
